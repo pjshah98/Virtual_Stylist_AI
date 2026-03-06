@@ -24,8 +24,18 @@ select {
   outline: none;
 }
 
+select option {
+  background: var(--bg);
+  color: var(--text);
+}
+
 html[data-theme="light"] select {
   background: rgba(0, 0, 0, 0.03);
+}
+
+html[data-theme="light"] select option {
+  background: var(--bg);
+  color: var(--text);
 }
 
 .preset-row {
@@ -40,6 +50,7 @@ html[data-theme="light"] select {
   border-radius: 14px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
   cursor: pointer;
   text-align: left;
   transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
@@ -52,6 +63,7 @@ html[data-theme="light"] select {
 
 .preset .k {
   font-weight: 700;
+  color: var(--text);
 }
 
 .preset .v {

@@ -42,7 +42,7 @@ html[data-theme="light"] .nav-shell {
 
 .nav-links {
   display: inline-flex;
-  gap: 14px;
+  gap: 28px;
   color: var(--muted);
 }
 

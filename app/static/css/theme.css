@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --bg: #0b0c10;
   --panel: rgba(255, 255, 255, 0.06);
   --panel-2: rgba(255, 255, 255, 0.09);
@@ -28,6 +29,7 @@
 }
 
 html[data-theme="light"] {
+  color-scheme: light;
   --bg: #f7f7fb;
   --panel: rgba(0, 0, 0, 0.035);
   --panel-2: rgba(0, 0, 0, 0.06);
