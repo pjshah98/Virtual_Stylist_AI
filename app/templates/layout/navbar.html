@@ -1,0 +1,23 @@
+<header class="nav-shell">
+  <div class="nav container">
+    <a class="brand" href="{{ url_for('main.landing') }}">
+      <span class="brand-mark">VS</span>
+      <span class="brand-name">Virtual Stylist AI</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="{{ url_for('main.stylist') }}">Stylist</a>
+      <a href="{{ url_for('main.explore') }}">Explore</a>
+      <a href="{{ url_for('main.saved') }}">My Saved Outfits</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="icon" aria-hidden="true">◐</span>
+        <span class="hide-sm">Theme</span>
+      </button>
+      <a class="btn btn-primary" href="{{ url_for('main.stylist') }}">Get styled</a>
+    </div>
+  </div>
+</header>
+

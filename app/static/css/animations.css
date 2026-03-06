@@ -1,0 +1,57 @@
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes vsaiGradient {
+  0% { transform: translate3d(-2%, -1%, 0) scale(1.02); }
+  50% { transform: translate3d(2%, 1%, 0) scale(1.05); }
+  100% { transform: translate3d(-1%, 2%, 0) scale(1.03); }
+}
+
+.loading {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  animation: fadeUp 180ms ease-out;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  border-top-color: rgba(184, 255, 106, 0.75);
+  animation: spin 850ms linear infinite;
+}
+
+html[data-theme="light"] .spinner {
+  border-color: rgba(0, 0, 0, 0.18);
+  border-top-color: rgba(109, 92, 255, 0.9);
+}
+
+.loading-title {
+  font-weight: 700;
+}
+
+.loading-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.outfit-card {
+  animation: fadeUp 180ms ease-out;
+}
+

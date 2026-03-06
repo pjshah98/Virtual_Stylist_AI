@@ -1,0 +1,25 @@
+{% extends 'layout/base.html' %}
+{% block title %}Explore · Virtual Stylist AI{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Explore</h1>
+    <p class="sub">A simple gallery powered by your favorites (stored locally in your browser).</p>
+  </div>
+  <div class="head-actions">
+    <a class="btn btn-primary" href="{{ url_for('main.stylist') }}">Style more</a>
+  </div>
+</section>
+
+<section>
+  <div class="panel" style="padding: 18px;">
+    <div class="panel-title">Favorites</div>
+    <p class="sub" style="margin-top: 6px;">
+      Save looks from the Stylist page and they’ll show up here.
+    </p>
+    <div id="favoritesGrid" class="outfit-grid" aria-label="Favorites grid"></div>
+  </div>
+</section>
+{% endblock %}
+

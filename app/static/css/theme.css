@@ -1,0 +1,42 @@
+:root {
+  --bg: #0b0c10;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-2: rgba(255, 255, 255, 0.09);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+
+  --accent: #b8ff6a;
+  --accent-2: #7c5cff;
+  --danger: #ff4d6d;
+
+  --radius: 18px;
+  --radius-sm: 12px;
+
+  /* Color swatches (used by cards). */
+  --c-black: #111317;
+  --c-white: #f4f6fb;
+  --c-gray: #9aa3b2;
+  --c-red: #ff3b57;
+  --c-orange: #ff8a3d;
+  --c-yellow: #ffd000;
+  --c-green: #2be37a;
+  --c-blue: #3b82f6;
+  --c-purple: #8b5cf6;
+  --c-pink: #ff5ca8;
+}
+
+html[data-theme="light"] {
+  --bg: #f7f7fb;
+  --panel: rgba(0, 0, 0, 0.035);
+  --panel-2: rgba(0, 0, 0, 0.06);
+  --text: rgba(12, 14, 20, 0.92);
+  --muted: rgba(12, 14, 20, 0.62);
+  --border: rgba(12, 14, 20, 0.12);
+  --shadow: 0 18px 50px rgba(26, 30, 44, 0.15);
+
+  --accent: #5bff7a;
+  --accent-2: #6d5cff;
+}
+

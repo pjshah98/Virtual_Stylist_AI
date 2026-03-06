@@ -1,0 +1,33 @@
+<article class="outfit-card" data-outfit-id="{{ outfit.id }}">
+  <div class="outfit-top">
+    <div class="outfit-title">{{ outfit.label }}</div>
+    <button class="icon-btn" type="button" data-action="favorite" aria-label="Favorite outfit">
+      <span aria-hidden="true">♥</span>
+    </button>
+  </div>
+
+  <div class="outfit-meta">
+    <span class="pill">Score {{ '%.2f'|format(outfit.score) }}</span>
+    <span class="pill">ML {{ '%.2f'|format(outfit.ml_score) }}</span>
+    <span class="pill">Harmony {{ '%.2f'|format(outfit.harmony_score) }}</span>
+  </div>
+
+  <div class="outfit-split">
+    <div class="tile">
+      <div class="swatch" style="background: var(--c-{{ outfit.colors.top|lower }});"></div>
+      <div class="tile-k">Top</div>
+      <div class="tile-v">{{ outfit.colors.top }} {{ outfit.items.top }}</div>
+    </div>
+    <div class="tile">
+      <div class="swatch" style="background: var(--c-{{ outfit.colors.bottom|lower }});"></div>
+      <div class="tile-k">Bottom</div>
+      <div class="tile-v">{{ outfit.colors.bottom }} {{ outfit.items.bottom }}</div>
+    </div>
+    <div class="tile">
+      <div class="swatch" style="background: var(--c-{{ outfit.colors.shoes|lower }});"></div>
+      <div class="tile-k">Shoes</div>
+      <div class="tile-v">{{ outfit.colors.shoes }} {{ outfit.items.shoes }}</div>
+    </div>
+  </div>
+</article>
+

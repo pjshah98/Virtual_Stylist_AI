@@ -1,0 +1,129 @@
+{% extends 'layout/base.html' %}
+{% block title %}Stylist · Virtual Stylist AI{% endblock %}
+
+{% block page_js %}
+<script src="{{ url_for('static', filename='js/animations.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/stylist.js') }}" defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Your Stylist</h1>
+    <p class="sub">Pick a preset, set your preferences, then generate ML-ranked outfit cards.</p>
+  </div>
+  <div class="head-actions">
+    <button class="btn btn-ghost" id="shuffleBtn" type="button">Shuffle</button>
+    <button class="btn btn-primary" id="generateBtn" type="button">Generate</button>
+  </div>
+</section>
+
+<section class="stylist-grid">
+  <aside class="panel">
+    <div class="panel-title">Style preset</div>
+    <div id="presetRow" class="preset-row" aria-label="Style presets"></div>
+
+    <div class="panel-title mt-16">Style preference</div>
+    <div class="field">
+      <label for="styleSelect">Style</label>
+      <select id="styleSelect">
+        <option value="">(Use preset / optional)</option>
+        <option>Casual</option>
+        <option>Formal</option>
+        <option>Streetwear</option>
+        <option>Sporty</option>
+        <option>Minimalist</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="seasonSelect">Season</label>
+      <select id="seasonSelect">
+        <option value="">Any</option>
+        <option>Summer</option>
+        <option>Winter</option>
+        <option>Fall</option>
+        <option>Spring</option>
+      </select>
+    </div>
+
+    <div class="panel-title mt-16">Preferences</div>
+    <div class="field">
+      <label for="topSelect">Top</label>
+      <select id="topSelect">
+        <option>Any</option>
+        <option>Shirt</option>
+        <option>T-shirt</option>
+        <option>Blouse</option>
+        <option>Hoodie</option>
+        <option>Sweater</option>
+        <option>Jacket</option>
+        <option>Tank top</option>
+        <option>Polo</option>
+        <option>Cardigan</option>
+        <option>Vest</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="bottomSelect">Bottom</label>
+      <select id="bottomSelect">
+        <option>Any</option>
+        <option>Jeans</option>
+        <option>Shorts</option>
+        <option>Skirt</option>
+        <option>Trousers</option>
+        <option>Leggings</option>
+        <option>Sweatpants</option>
+        <option>Chinos</option>
+        <option>Capris</option>
+        <option>Joggers</option>
+        <option>Culottes</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="shoesSelect">Shoes</label>
+      <select id="shoesSelect">
+        <option>Any</option>
+        <option>Sneakers</option>
+        <option>Boots</option>
+        <option>Flats</option>
+        <option>Heels</option>
+        <option>Sandals</option>
+        <option>Loafers</option>
+        <option>Moccasins</option>
+        <option>Derby</option>
+        <option>Oxford</option>
+        <option>Brogue</option>
+      </select>
+    </div>
+
+    {% include 'components/color_picker.html' %}
+
+    <div class="panel-title mt-16">Personalization</div>
+    <div class="field inline">
+      <label for="limitSelect">Cards</label>
+      <select id="limitSelect">
+        <option value="5" selected>5</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+  </aside>
+
+  <section class="results">
+    <div id="loading" class="loading hidden" role="status" aria-live="polite">
+      <div class="spinner"></div>
+      <div>
+        <div class="loading-title">Styling in progress…</div>
+        <div class="loading-sub">Ranking outfits with ML + color harmony.</div>
+      </div>
+    </div>
+
+    <div id="errorBox" class="alert hidden"></div>
+
+    <div id="outfitGrid" class="outfit-grid" aria-label="Outfit results">
+      <!-- Cards rendered by JS -->
+    </div>
+  </section>
+</section>
+{% endblock %}
+

@@ -1,0 +1,64 @@
+{% extends 'layout/base.html' %}
+{% block title %}Virtual Stylist AI{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">AI Powered Outfit Generator</div>
+    <h1>Find the perfect outfit in seconds.</h1>
+    <p class="lede">ML-ranked outfits, harmony-aware palettes, and a modern stylist experience.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="{{ url_for('main.stylist') }}">Generate Outfit</a>
+      <a class="btn btn-ghost btn-lg" href="{{ url_for('main.explore') }}">Explore Styles</a>
+    </div>
+
+    <div class="hero-metrics">
+      <div class="metric">
+        <div class="metric-value">ML-ranked</div>
+        <div class="metric-label">Recommendations</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">Color harmony</div>
+        <div class="metric-label">Palette-aware</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">Favorites</div>
+        <div class="metric-label">Save looks</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="glass">
+      <div class="glass-title">Tonight’s vibe</div>
+      <div class="glass-sub">Streetwear · complementary palette</div>
+      <div class="mini-grid">
+        <div class="mini-tile">Hoodie</div>
+        <div class="mini-tile">Jeans</div>
+        <div class="mini-tile">Sneakers</div>
+      </div>
+      <div class="divider"></div>
+      <div class="pill-row">
+        <span class="pill">Score: 0.86</span>
+        <span class="pill">Harmony: 0.72</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="grid-3">
+  <div class="feature">
+    <h3>Startup-grade UX</h3>
+    <p>Polished cards, fast interactions, and a clean modular Flask architecture.</p>
+  </div>
+  <div class="feature">
+    <h3>Explainable scoring</h3>
+    <p>Each outfit includes an ML score and a harmony score for quick trust-building.</p>
+  </div>
+  <div class="feature">
+    <h3>Built to iterate</h3>
+    <p>Services + API routes make it easy to add personalization, history, and real catalogs.</p>
+  </div>
+</section>
+{% endblock %}
+

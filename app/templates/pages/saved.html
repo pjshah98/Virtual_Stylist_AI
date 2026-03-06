@@ -1,0 +1,23 @@
+{% extends 'layout/base.html' %}
+{% block title %}My Saved Outfits · Virtual Stylist AI{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>My Saved Outfits</h1>
+    <p class="sub">Saved locally in your browser (localStorage).</p>
+  </div>
+  <div class="head-actions">
+    <a class="btn btn-primary" href="{{ url_for('main.stylist') }}">Generate more</a>
+  </div>
+</section>
+
+<section>
+  <div class="panel" style="padding: 18px;">
+    <div class="panel-title">Favorites</div>
+    <p class="sub" style="margin-top: 6px;">Tap ♥ on an outfit card to save it here.</p>
+    <div id="favoritesGrid" class="outfit-grid" aria-label="Saved outfits grid"></div>
+  </div>
+</section>
+{% endblock %}
+
